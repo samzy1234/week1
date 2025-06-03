@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url('/static/uploads/meow.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            width: 400px;
+            padding: 20px;
+            background: rgb(162, 183, 134);
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            width: 120px;
+            margin-right: 10px;
+        }
+
+        .form-group input {
+            flex: 1;
+            padding: 8px;
+        }
+
+        .form-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #b18155;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <form method="POST" enctype="multipart/form-data">
+            
+            <div class="form-group">
+                <label for="image">Profile Image:</label>
+                <input type="file" name="image" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bday">Birthday:</label>
+                <input type="date" name="bday" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

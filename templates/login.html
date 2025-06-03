@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url('/static/uploads/meow.jpg');
+            background-color: #c9adadbe;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .form-box {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            padding: 20px;
+            background: rgb(162, 183, 134);
+            border: 1px solid #ed8f8f;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            width: 90px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .button-group button {
+            padding: 9px 16px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-group a {
+            text-decoration: underline;
+            color: rgb(15, 36, 232);
+            font-size: 0.95em;
+        }
+
+        .button-group button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+            </div>
+            <div class="button-group">
+                <a href="register">Register</a>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
